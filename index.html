@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blitscope</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+  <div id="app">
+    <header id="toolbar">
+      <div class="toolbar-left">
+        <h1 class="logo">Blitscope</h1>
+        <span class="version">v0.1 demo</span>
+      </div>
+      <div class="toolbar-center">
+        <div id="perf-bar">
+          <span id="perf-fps">-- FPS</span>
+          <span id="perf-points">-- pts/f</span>
+          <span id="perf-draw">-- ms draw</span>
+          <span id="perf-dropped" class="warn hidden">dropped</span>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <button id="btn-screenshot" title="Screenshot (PNG)">Capture</button>
+        <button id="btn-csv" title="Export CSV">CSV</button>
+        <button id="btn-theme" title="Toggle theme">Theme</button>
+      </div>
+    </header>
+
+    <div id="main">
+      <aside id="sidebar">
+        <div id="sidebar-content"></div>
+      </aside>
+      <div id="plot-area">
+        <div id="plot-tabs" class="hidden">
+          <div id="tab-bar"></div>
+        </div>
+        <div id="plot-container"></div>
+      </div>
+    </div>
+
+    <footer id="status-bar">
+      <div id="status-left">
+        <span id="status-signal">Signal: --</span>
+      </div>
+      <div id="status-center">
+        <span id="status-traces">Traces: 0</span>
+        <span id="status-mode">Mode: Cartesian</span>
+      </div>
+      <div id="status-right">
+        <span id="status-marker">Marker: --</span>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
